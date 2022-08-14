@@ -1,23 +1,42 @@
-// Como podemos melhorar o esse código usando TS? 
+// Esta é minha resposta para o Desafio 2
 
-let pessoa1 = {};
-pessoa1.nome = "maria";
-pessoa1.idade = 29;
-pessoa1.profissao = "atriz"
+// Aqui defino os trabalhos posiveis
+enum Trabalho {
+    Fotografa,
+    Consultor,
+    Medico,
+    Advogado
+}
 
-let pessoa2 = {}
-pessoa2.nome = "roberto";
-pessoa2.idade = 19;
-pessoa2.profissao = "Padeiro";
+// aqui eu crio o tipo de dados para humanos
+type Humano = {
+    nome: string,
+    idade: number,
+    profissao: Trabalho
+}
 
-let pessoa3 = {
-    nome: "laura",
-    idade: "32",
-    profissao: "Atriz"
+// seguem exemplos de humanos usando o tipo de dados criado anteriormente 
+
+let pessoa1: Humano = {
+    nome: 'Michelle',
+    idade: 43,
+    profissao: Trabalho.Fotografa
 };
 
-let pessoa4 = {
-    nome = "carlos",
-    idade = 19,
-    profissao = "padeiro"
+let pessoa2: Humano = {
+    nome: 'Mario',
+    idade: 72,
+    profissao: Trabalho.Medico
+};
+
+let pessoa3: Humano = {
+    nome: 'Javo',
+    idade: 42,
+    profissao: Trabalho.Consultor
+};
+
+let pessoa4: Humano = {
+    nome: "Pipa",
+    idade: 33,
+    profissao: Trabalho.Advogado
 }
